@@ -1,0 +1,27 @@
+.button{
+    border: none;
+    padding: 4px 8px;
+    font-weight: 500;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 24px;
+    cursor: pointer;
+    &-outline{
+        background-color: rgba($color: #ffffff, $alpha: 0.8);
+        &:hover{
+            background: $primary;
+            color:$white;
+        }
+
+    }
+    &-primary{
+        background-color: $primary;
+        &:hover{
+            background: white;
+            color:$black;
+        }
+    }
+   
+}

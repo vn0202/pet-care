@@ -1,0 +1,36 @@
+$primary: rgba(77, 124 ,15 ,1) !default;
+
+$secondary: #072156 !default;
+
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+
+
+// device viewport style
+$screen-viewport: 1024px;
+$tablet-viewport: 768px;
+$mobile-viewport: 490px;
+
+// font-size
+$text-sm:14px;
+$text-base:16px;
+$text-lg:18px;
+$text-xl:20px;
+$text-2xl:24px;
+
+//font-bold
+$font-thin:300;
+$font-normal:400;
+$font-medium:500;
+$font-semibold:600;
+$font-bold:700; 

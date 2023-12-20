@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;900&display=swap");
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: https://meyerweb.com
+	HTML5 Doctor				:: https://html5doctor.com
+	and the HTML5 Boilerplate	:: https://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, figure, footer, header, nav, section, details, summary {
+  display: block; }
+
+/* Handle box-sizing while better addressing child elements:
+   https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {
+  max-width: 100%; }
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll; }
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  font-weight: bold;
+  vertical-align: bottom; }
+
+td {
+  font-weight: normal;
+  vertical-align: top; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */ }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom; }
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+select, input, textarea {
+  font: 99% sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+small {
+  font-size: 85%; }
+
+strong {
+  font-weight: bold; }
+
+td, td img {
+  vertical-align: top; }
+
+/* Make sure sup and sub don't mess with your line-heights https://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0; }
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible; }
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic; }
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px; }
+  #header .header_logo {
+    width: 80px;
+    height: 80px;
+    font-size: 16px; }
+    #header .header_logo img {
+      width: 100%;
+      border-radius: 100%; }
+  #header .header_nav-item {
+    display: inline-flex; }
+  #header .header_search {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 4px; }
+    #header .header_search input {
+      border: none;
+      outline: none;
+      background: transparent; }
+  #header .header_auth-register {
+    position: relative; }
+    #header .header_auth-register--form {
+      position: absolute;
+      top: calc(100% + 10px);
+      width: 500px;
+      right: 0; }
+      #header .header_auth-register--form .form-header {
+        font-size: 24px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #4d7c0f;
+        padding: 16px;
+        text-transform: uppercase;
+        width: 100%; }
+      #header .header_auth-register--form .form_body {
+        background-color: #ffffff;
+        padding: 6px 12px; }
+        #header .header_auth-register--form .form_body-group {
+          width: 100%;
+          margin-bottom: 16px; }
+          #header .header_auth-register--form .form_body-group input {
+            width: 100%;
+            padding: 8px 12px;
+            background-color: #e9ecef;
+            border-radius: 24px;
+            outline: none;
+            border: none; }
+        #header .header_auth-register--form .form_body-group:first-child {
+          display: flex;
+          gap: 16px; }
+        #header .header_auth-register--form .form_body .birtday {
+          display: flex;
+          align-items: center;
+          gap: 16px; }
+          #header .header_auth-register--form .form_body .birtday input {
+            flex-grow: 1;
+            padding: 8px 12px;
+            background-color: #e9ecef;
+            border-radius: 24px;
+            outline: none;
+            border: none; }
+        #header .header_auth-register--form .form_body .gender {
+          display: flex;
+          align-items: center;
+          gap: 16px; }
+          #header .header_auth-register--form .form_body .gender select {
+            padding: 8px 12px;
+            background-color: #e9ecef;
+            border-radius: 24px;
+            outline: none;
+            border: none;
+            flex: 1; }
+        #header .header_auth-register--form .form_body .container-button {
+          text-align: center;
+          margin: 24px 0; }
+
+body {
+  background-image: url("../../../assets/images/bg-main.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.button {
+  border: none;
+  padding: 4px 8px;
+  font-weight: 500;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 24px;
+  cursor: pointer; }
+  .button-outline {
+    background-color: rgba(255, 255, 255, 0.8); }
+    .button-outline:hover {
+      background: #4d7c0f;
+      color: #fff; }
+  .button-primary {
+    background-color: #4d7c0f; }
+    .button-primary:hover {
+      background: white;
+      color: #000; }
+
+/*# sourceMappingURL=style.css.map */
