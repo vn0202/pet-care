@@ -1,0 +1,21 @@
+#footer{
+    padding:16px;
+    background-color: cyan;
+    .footer__container{
+        display: flex;
+        justify-content: space-between;
+
+        .footer__item{
+            &__label{
+                color:$white;
+                font-size: $text-lg;
+                font-weight: $font-bold;
+                text-transform: uppercase;
+                margin-bottom: 4px;
+            }
+            &__content{
+                text-transform: uppercase;
+            }
+        }
+    }
+}

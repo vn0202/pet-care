@@ -1,0 +1,113 @@
+main{
+    flex:1;
+   section.home{
+    background-image: url('../../../assets/images/bg-main.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    .content{
+        max-width: 400px;
+        margin: auto 0;
+        gap: 16px;
+        transform: translateY(-50%);
+        &__heading{
+            font-size: $text-6xl;
+            color:$white;
+            text-align: center;
+            margin-bottom: 16px;
+            font-weight: $font-bold;
+            font-style: italic;
+    
+        }
+        &__hero{
+            font-size: $text-4xl;
+            color:$white;
+            font-weight: $font-medium;
+            text-align: center;
+            text-wrap: balance;
+              }
+            }
+   }
+
+   section.description{
+    display: flex;
+    height: 100vh;
+
+     .description__thumnail{
+        flex-basis: 60%;
+        height: 100%;
+        background-clip: border-box;
+        background-image: url('../../../../assets/images/description.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+     }
+     .description__content{
+        display: flex;
+        flex: 1;
+        background-color: rgb(187, 133, 86);
+       &__container{
+        width: 350px;
+        margin: auto auto;
+        h3{
+            color:$white;
+            font-weight: $font-semibold;
+            font-size: $text-5xl;
+            margin-bottom: 24px;
+            text-wrap: balance;
+        }
+        p{
+           font-size: $text-lg;
+           text-wrap: balance;
+        }
+       }
+     }
+   }
+   section.services{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 32px;
+    background-color:rgb(253 ,230, 138);
+    .heading{
+        text-align: center;
+        font-size: $text-2xl;
+        color:rgb(34, 211, 238);
+    }
+    .service__lists{
+       width: 80%;
+       margin: auto;
+       display: flex;
+       &__item{
+        padding: 0 24px;
+        width: 100%;
+        overflow: hidden;
+        .item__thumnail{
+            width: 100%;
+            aspect-ratio: 4/5;
+            background-image: url('../../../../assets/images/service1.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .item__description{
+            background-color: rgb(103, 232 ,249);
+            padding:24px 16px;
+            min-height: 60px;
+
+        }
+       }
+    }
+   }
+   section.join-us{
+    min-height: 100vh;
+    background-image: url('../../../../assets/images/section3section3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+   }
+   
+    
+}

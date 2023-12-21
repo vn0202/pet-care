@@ -214,10 +214,13 @@ input[type=button] {
       width: 100%;
       border-radius: 100%; }
   #header .header_nav-item {
-    display: inline-flex; }
+    display: inline-flex;
+    gap: 4px;
+    margin-right: 16px; }
   #header .header_search {
     display: flex;
     align-items: center;
+    flex-basis: 40%;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     padding: 4px; }
@@ -225,69 +228,116 @@ input[type=button] {
       border: none;
       outline: none;
       background: transparent; }
-  #header .header_auth-register {
-    position: relative; }
-    #header .header_auth-register--form {
-      position: absolute;
-      top: calc(100% + 10px);
-      width: 500px;
-      right: 0; }
-      #header .header_auth-register--form .form-header {
-        font-size: 24px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background: #4d7c0f;
-        padding: 16px;
-        text-transform: uppercase;
-        width: 100%; }
-      #header .header_auth-register--form .form_body {
-        background-color: #ffffff;
-        padding: 6px 12px; }
-        #header .header_auth-register--form .form_body-group {
-          width: 100%;
-          margin-bottom: 16px; }
-          #header .header_auth-register--form .form_body-group input {
+  #header .header_auth {
+    display: flex;
+    gap: 16px; }
+    #header .header_auth-register {
+      position: relative; }
+      #header .header_auth-register .register__form {
+        position: absolute;
+        top: calc(100% + 10px);
+        width: 500px;
+        right: 0; }
+        #header .header_auth-register .register__form .form-header {
+          font-size: 24px;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background: #4d7c0f;
+          padding: 16px;
+          text-transform: uppercase;
+          width: 100%; }
+        #header .header_auth-register .register__form .form_body {
+          background-color: #ffffff;
+          padding: 6px 12px; }
+          #header .header_auth-register .register__form .form_body-group {
             width: 100%;
-            padding: 8px 12px;
-            background-color: #e9ecef;
-            border-radius: 24px;
-            outline: none;
-            border: none; }
-        #header .header_auth-register--form .form_body-group:first-child {
-          display: flex;
-          gap: 16px; }
-        #header .header_auth-register--form .form_body .birtday {
+            margin-bottom: 16px; }
+            #header .header_auth-register .register__form .form_body-group input {
+              width: 100%;
+              padding: 8px 12px;
+              background-color: #e9ecef;
+              border-radius: 24px;
+              outline: none;
+              border: none; }
+          #header .header_auth-register .register__form .form_body-group:first-child {
+            display: flex;
+            gap: 16px; }
+          #header .header_auth-register .register__form .form_body .birtday {
+            display: flex;
+            align-items: center;
+            gap: 16px; }
+            #header .header_auth-register .register__form .form_body .birtday input {
+              flex-grow: 1;
+              padding: 8px 12px;
+              background-color: #e9ecef;
+              border-radius: 24px;
+              outline: none;
+              border: none; }
+          #header .header_auth-register .register__form .form_body .gender {
+            display: flex;
+            align-items: center;
+            gap: 16px; }
+            #header .header_auth-register .register__form .form_body .gender select {
+              padding: 8px 12px;
+              background-color: #e9ecef;
+              border-radius: 24px;
+              outline: none;
+              border: none;
+              flex: 1; }
+    #header .header_auth-login {
+      position: relative; }
+      #header .header_auth-login .login__form {
+        position: absolute;
+        top: calc(100% + 10px);
+        width: 500px;
+        right: 0; }
+        #header .header_auth-login .login__form__header {
+          font-size: 24px;
+          font-weight: 700;
+          text-transform: uppercase;
           display: flex;
           align-items: center;
-          gap: 16px; }
-          #header .header_auth-register--form .form_body .birtday input {
-            flex-grow: 1;
-            padding: 8px 12px;
-            background-color: #e9ecef;
-            border-radius: 24px;
-            outline: none;
-            border: none; }
-        #header .header_auth-register--form .form_body .gender {
-          display: flex;
-          align-items: center;
-          gap: 16px; }
-          #header .header_auth-register--form .form_body .gender select {
-            padding: 8px 12px;
-            background-color: #e9ecef;
-            border-radius: 24px;
-            outline: none;
-            border: none;
-            flex: 1; }
-        #header .header_auth-register--form .form_body .container-button {
-          text-align: center;
-          margin: 24px 0; }
+          justify-content: space-between;
+          background: #4d7c0f;
+          padding: 16px; }
+        #header .header_auth-login .login__form__body {
+          background-color: #fff;
+          padding: 12px; }
+          #header .header_auth-login .login__form__body .form__group {
+            width: 100%;
+            margin-bottom: 16px; }
+            #header .header_auth-login .login__form__body .form__group input {
+              width: 100%;
+              padding: 8px 12px;
+              background-color: #e9ecef;
+              border-radius: 24px;
+              outline: none;
+              border: none; }
+          #header .header_auth-login .login__form__body .register__now span {
+            text-decoration: underline;
+            color: blue;
+            cursor: pointer; }
 
-body {
-  background-image: url("../../../assets/images/bg-main.jpg");
-  background-size: cover;
-  background-repeat: no-repeat; }
+#footer {
+  padding: 16px;
+  background-color: cyan; }
+  #footer .footer__container {
+    display: flex;
+    justify-content: space-between; }
+    #footer .footer__container .footer__item__label {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 4px; }
+    #footer .footer__container .footer__item__content {
+      text-transform: uppercase; }
+
+.container-button {
+  text-align: center;
+  margin: 24px 0; }
 
 .button {
   border: none;
@@ -305,9 +355,99 @@ body {
       background: #4d7c0f;
       color: #fff; }
   .button-primary {
-    background-color: #4d7c0f; }
+    background-color: #4d7c0f;
+    color: #fff; }
     .button-primary:hover {
       background: white;
       color: #000; }
+
+main {
+  flex: 1; }
+  main section.home {
+    background-image: url("../../../assets/images/bg-main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; }
+    main section.home .content {
+      max-width: 400px;
+      margin: auto 0;
+      gap: 16px;
+      transform: translateY(-50%); }
+      main section.home .content__heading {
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 16px;
+        font-weight: 700;
+        font-style: italic; }
+      main section.home .content__hero {
+        font-size: 32px;
+        color: #fff;
+        font-weight: 500;
+        text-align: center;
+        text-wrap: balance; }
+  main section.description {
+    display: flex;
+    height: 100vh; }
+    main section.description .description__thumnail {
+      flex-basis: 60%;
+      height: 100%;
+      background-clip: border-box;
+      background-image: url("../../../../assets/images/description.jpg");
+      background-size: cover;
+      background-repeat: no-repeat; }
+    main section.description .description__content {
+      display: flex;
+      flex: 1;
+      background-color: #bb8556; }
+      main section.description .description__content__container {
+        width: 350px;
+        margin: auto auto; }
+        main section.description .description__content__container h3 {
+          color: #fff;
+          font-weight: 600;
+          font-size: 36px;
+          margin-bottom: 24px;
+          text-wrap: balance; }
+        main section.description .description__content__container p {
+          font-size: 18px;
+          text-wrap: balance; }
+  main section.services {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 32px;
+    background-color: #fde68a; }
+    main section.services .heading {
+      text-align: center;
+      font-size: 24px;
+      color: #22d3ee; }
+    main section.services .service__lists {
+      width: 80%;
+      margin: auto;
+      display: flex; }
+      main section.services .service__lists__item {
+        padding: 0 24px;
+        width: 100%;
+        overflow: hidden; }
+        main section.services .service__lists__item .item__thumnail {
+          width: 100%;
+          aspect-ratio: 4/5;
+          background-image: url("../../../../assets/images/service1.jpg");
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat; }
+        main section.services .service__lists__item .item__description {
+          background-color: #67e8f9;
+          padding: 24px 16px;
+          min-height: 60px; }
+  main section.join-us {
+    min-height: 100vh;
+    background-image: url("../../../../assets/images/section3section3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
 
 /*# sourceMappingURL=style.css.map */
