@@ -205,7 +205,7 @@ input[type=button] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px; }
+  padding: 10px; }
   #header .header_logo {
     width: 80px;
     height: 80px;
@@ -286,6 +286,29 @@ input[type=button] {
               outline: none;
               border: none;
               flex: 1; }
+      #header .header_auth-register .register__form-success {
+        position: absolute;
+        top: calc(100% + 10px);
+        min-width: 500px;
+        right: 0;
+        background-color: #fff;
+        font-size: 24px;
+        padding: 24px; }
+        #header .header_auth-register .register__form-success .container__close_icon {
+          display: flex;
+          justify-content: end; }
+        #header .header_auth-register .register__form-success .register__form__content-success {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          padding-bottom: 48px;
+          padding: 0 24px; }
+          #header .header_auth-register .register__form-success .register__form__content-success svg {
+            margin: 0 auto; }
+          #header .header_auth-register .register__form-success .register__form__content-success .content {
+            margin-top: 24px;
+            font-weight: 600;
+            text-align: center; }
     #header .header_auth-login {
       position: relative; }
       #header .header_auth-login .login__form {
@@ -319,6 +342,33 @@ input[type=button] {
             text-decoration: underline;
             color: blue;
             cursor: pointer; }
+  #header .menu__user {
+    position: relative; }
+    #header .menu__user__name {
+      height: 60px;
+      width: 60px; }
+      #header .menu__user__name img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%; }
+    #header .menu__user__setting {
+      position: absolute;
+      top: calc(100% + 4px);
+      right: 0;
+      width: 150px;
+      background-color: #fff;
+      padding: 16px;
+      border: 1px solid #ccc; }
+      #header .menu__user__setting .item {
+        padding: 4px; }
+        #header .menu__user__setting .item:hover {
+          background-color: #4d7c0f;
+          color: #fff; }
+
+#header.login {
+  background-color: #fff; }
+  #header.login .header_search {
+    background-color: aqua; }
 
 #footer {
   padding: 16px;
@@ -363,6 +413,9 @@ input[type=button] {
 
 main {
   flex: 1; }
+  main section.home.login {
+    background-image: none;
+    min-height: auto; }
   main section.home {
     background-image: url("../../../assets/images/bg-main.jpg");
     background-size: cover;

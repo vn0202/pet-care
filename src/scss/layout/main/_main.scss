@@ -1,5 +1,9 @@
 main{
     flex:1;
+    section.home.login{
+        background-image: none;
+        min-height: auto;
+    }
    section.home{
     background-image: url('../../../assets/images/bg-main.jpg');
     background-size: cover;

@@ -1,0 +1,15 @@
+{
+    "name": "vannghia/pet-care",
+    "autoload": {
+        "psr-4": {
+            "Vannghia\\PetCare\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "vn0202",
+            "email": "nghiavuxp0202@gmail.com"
+        }
+    ],
+    "require": {}
+}
